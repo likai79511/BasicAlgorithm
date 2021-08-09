@@ -6,18 +6,18 @@ import com.example.algorithm.Log;
 public class test {
 
     public static void main(String[] args) {
-        Integer data[] = {1,2,3,4,5,6,9,8,7,5,6};
-        int target = 5;
 
-        Log.i("data: %s\ntarget: %s\nresult: %s",
-                CommonUtils.Singleton.instance.toArrayStr(data),
-                target,
-                LinearSearch.search(data,target));
+        Integer data[] = CommonUtils.generateRandomData(100, 10000);
+        CommonUtils.e("sort before: "+CommonUtils.toArrayStr(data));
+        SelectSearch.sort(data);
+        CommonUtils.e("sort after: "+CommonUtils.toArrayStr(data));
+        CommonUtils.e("sort check: "+CommonUtils.checkIsOrderData(data));
 
-        target = 66;
-        Log.i("\ndata: %s\ntarget: %s\nresult: %s",
-                CommonUtils.Singleton.instance.toArrayStr(data),
-                target,
-                LinearSearch.search(data,target));
+
+        Integer data2[] = CommonUtils.generateRandomData(100, 10000);
+        CommonUtils.e("sort-Recursive before: "+CommonUtils.toArrayStr(data2));
+        SelectSearch.sortRecursive(data2,0);
+        CommonUtils.e("sort-Recursive after: "+CommonUtils.toArrayStr(data2));
+        CommonUtils.e("sort-Recursive check: "+CommonUtils.checkIsOrderData(data2));
     }
 }
