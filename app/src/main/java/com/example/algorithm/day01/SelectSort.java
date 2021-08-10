@@ -29,8 +29,12 @@ import com.example.algorithm.CommonUtils;
  * 原地排序：不会新开辟空间，只在原始数组上操作（交换位置）。
  * 3.递归方式： 一定要注意停止条件。
  * 递归能够让思路更清晰，但同时也会极大增加方法入栈。 使用须谨慎，小心stackoverflow.
+ *
+ * 弊端： 因为选择排序，每次遍历 都不会为 下一轮遍历提供什么有用的信息。 所在
+ * 在处理 已有序的数据 或者 相等的数据时，排序过程依旧会花费 和 随机数据 差不多的时间（只差交换swap的时间）
+ *
  */
-public class SelectSearch {
+public class SelectSort {
 
     /**
      * 一种 原地排序 的实现思路 (非递归实现)：
