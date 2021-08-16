@@ -73,6 +73,11 @@ public class DynamicArray<E> {
         size++;
     }
 
+    public void addFirst(E value){
+        add(0,value);
+    }
+
+
     public E removeLast() {
 
         if (size <= 0) {
@@ -113,6 +118,17 @@ public class DynamicArray<E> {
             throw new IllegalArgumentException("out of bounds");
         }
         return data[index];
+    }
+
+    public E getLast(){
+        if (size==0){
+            throw new IllegalArgumentException("the array is empty");
+        }
+        return data[size];
+    }
+
+    public int getSize(){
+        return size;
     }
 
     public void update(int index, E value) {
