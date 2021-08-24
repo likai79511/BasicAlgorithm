@@ -5,7 +5,7 @@ import com.example.algorithm.CommonUtils;
 public class test {
     public static void main(String[] args) {
 
-        MyStack<Integer> stack = new MyStack<>();
+       /* MyStack<Integer> stack = new MyStack<>();
         CommonUtils.e(stack.toString());
 
         stack.push(1);
@@ -52,7 +52,21 @@ public class test {
         value = queue.dequeue();
         CommonUtils.e("dequeue: "+value+", result: "+queue.toString());
         value = queue.dequeue();
-        CommonUtils.e("dequeue: "+value+", result: "+queue.toString());
+        CommonUtils.e("dequeue: "+value+", result: "+queue.toString());*/
+
+        //Loop Queue
+        LoopQueue<Integer> loopQueue = new LoopQueue<>();
+        CommonUtils.e(loopQueue.toString());
+
+        loopQueue.enqueue(1);
+        CommonUtils.e("enqueue : 1, result: "+loopQueue.toString());
+        loopQueue.enqueue(2);
+        CommonUtils.e("enqueue : 2, result: "+loopQueue.toString());
+        loopQueue.enqueue(3);
+        CommonUtils.e("enqueue : 3, result: "+loopQueue.toString());
+        loopQueue.enqueue(4);
+        CommonUtils.e("enqueue : 4, result: "+loopQueue.toString());
+
     }
 
     /**

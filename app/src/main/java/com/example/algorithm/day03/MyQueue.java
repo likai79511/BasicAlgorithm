@@ -15,6 +15,7 @@ import com.example.algorithm.day02.DynamicArray;
  * {@link this#getSize} : O(1)
  * {@link this#isEmpty} : O(1)
  *
+ * 优化思路:降低 出队时的时间复杂度,实现方式 {@link LoopQueue}
  *
  * @param <E>
  */
